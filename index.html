@@ -1,0 +1,28 @@
+﻿<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#10100f">
+<title>Luna Moda — estilo que acompanha você</title>
+<link rel="stylesheet" href="style.css?v=5">
+</head>
+<body>
+<div class="announcement">Frete grátis a partir de R$ 299 · 10% OFF na primeira compra com LUNA10</div>
+<header class="topbar"><a class="brand" href="#inicio">LUNA <span>MODA</span></a><nav><a href="#inicio">Início</a><a href="#vitrine">Vitrine</a><a href="#entrega">Entrega</a></nav><div class="top-actions"><button class="icon-btn" aria-label="Abrir sacola" onclick="toggleCart(true)">🛍<span class="count" id="cartCount">0</span></button></div></header>
+<main>
+<section class="hero" id="inicio"><div class="hero-card"><div class="hero-copy"><div class="eyebrow">Nova coleção · 2026</div><h1>Seu estilo.<br>Seu momento.</h1><p>Peças escolhidas para acompanhar você em todos os momentos. Descubra a coleção Luna Moda e encontre seu próximo favorito.</p><a class="button" href="#vitrine">Explorar coleção&nbsp; →</a></div><div class="hero-note">Luna Moda · Super Premium</div></div></section>
+<section class="benefits"><div class="benefit"><span class="em">✦</span><div><strong>Seleção premium</strong><small>Qualidade em cada detalhe</small></div></div><div class="benefit"><span class="em">🚚</span><div><strong>Entrega local</strong><small>Manaus e Iranduba</small></div></div><div class="benefit"><span class="em">↺</span><div><strong>Troca descomplicada</strong><small>Até 7 dias após o recebimento</small></div></div><div class="benefit"><span class="em">🔒</span><div><strong>Compra segura</strong><small>Atendimento pelo WhatsApp</small></div></div></section>
+<section class="section" id="vitrine"><div class="section-head"><div><div class="kicker">Escolha o seu próximo look</div><h2>Nossa vitrine</h2></div><div class="results" id="results">70 produtos</div></div><div class="controls"><div class="filters" id="filters"></div><input class="search" id="search" type="search" placeholder="Buscar produto..." aria-label="Buscar produto"></div><div class="grid" id="grid"></div></section>
+<section class="delivery-wrap" id="entrega"><div class="delivery"><div><div class="kicker">Entrega local</div><h2>Receba em casa,<br>com todo cuidado.</h2><p>Entregamos em Manaus e Iranduba. O prazo e o valor do frete são confirmados pelo WhatsApp conforme o seu endereço. Acima de R$ 299, o frete é grátis.</p><a class="button" href="#vitrine">Ver produtos&nbsp; →</a></div><div class="delivery-box"><span style="font-size:28px">📦</span><div><strong>Manaus e Iranduba</strong><span>Consulte prazo e frete pelo WhatsApp</span></div></div></div></section>
+</main>
+<footer class="footer"><div class="footer-inner"><div><a class="brand" href="#inicio">LUNA <span>MODA</span></a><p>Moda, acessórios e atitude para acompanhar seu ritmo. Atendimento especial pelo WhatsApp.</p></div><div class="footer-links"><a href="#vitrine">Produtos</a><a href="#entrega">Entrega</a><a id="footerWhatsapp" href="#">Fale conosco ↗</a></div></div><div class="copyright">© 2026 Luna Moda. Todos os direitos reservados.</div></footer>
+<div class="cart-panel" id="cartPanel" onclick="if(event.target===this)toggleCart(false)"><aside class="cart"><div class="cart-head"><h2>Sua sacola</h2><button class="close" onclick="toggleCart(false)" aria-label="Fechar sacola">×</button></div><div class="cart-items" id="cartItems"></div><div class="cart-total" id="cartTotal"></div></aside></div>
+<div class="cart-panel" id="checkoutModal" onclick="if(event.target===this)closeCheckout()"><aside class="cart checkout-form-panel"><div class="cart-head"><h2>Finalizar pedido</h2><button class="close" onclick="closeCheckout()" aria-label="Fechar checkout">×</button></div><p class="checkout-intro">Informe seus dados de entrega em Manaus ou Iranduba e escolha como prefere pagar.</p><form id="checkoutForm" onsubmit="submitOrder(event)"><label>Nome completo<input name="name" autocomplete="name" required></label><label>E-mail<input name="email" type="email" autocomplete="email" required></label><label>WhatsApp<input name="phone" type="tel" autocomplete="tel" required></label><label>Endereço de entrega<input name="address" autocomplete="street-address" required></label><label>Cidade<select name="city" autocomplete="address-level2" required><option value="">Selecione a cidade</option><option value="Manaus">Manaus</option><option value="Iranduba">Iranduba</option></select></label><label>CEP<input name="zipcode" inputmode="numeric" autocomplete="postal-code" required></label><fieldset class="payment-options"><legend>Pagamento na entrega</legend><label class="pay-choice"><input type="radio" name="payment" value="dinheiro" checked><span>Dinheiro</span></label><label class="pay-choice"><input type="radio" name="payment" value="pix_entrega"><span>Pix na hora da entrega</span></label></fieldset><p class="shipping-note">Frete grátis em compras acima de R$ 299. Para compras menores, o frete é combinado pelo WhatsApp antes de enviar o pedido.</p><button class="button checkout" id="submitOrderButton" type="submit">Enviar pedido pelo WhatsApp ↗</button><p id="checkoutError" class="checkout-error" role="alert"></p></form></aside></div>
+<div class="toast" id="toast">Adicionado à sacola</div>
+<script src="catalog.js?v=5"></script>
+<script src="script.js?v=5"></script>
+</body></html>
+
+
+
